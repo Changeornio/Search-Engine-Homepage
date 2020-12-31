@@ -1,0 +1,120 @@
+html {
+    font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: 580; background-color: rgb(255, 255, 255); box-sizing: border-box;  
+}
+body {
+    margin: 0px 0px;
+}
+nav {
+    height: 160px; width: 100%; 
+}
+nav ul, nav h1  {
+    display: inline-block;
+}
+h1 {
+    font-family: 'Overpass', sans-serif; cursor:not-allowed;
+    font-size: 62px;
+    margin-left: 20px; margin-top: 40px; margin-bottom: 18px; margin-right: 20px;  
+}
+ul {
+    list-style-type: none;
+    margin-top: 0px; padding: 0px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 90px;
+    margin: 0 10px;
+}
+nav ul li a{
+    text-decoration: none; color: black;
+    font-size: 20px; vertical-align: 10%;
+    padding: 7px 13px; border-radius: 3px;
+}
+a .active, a:hover {
+    color: white; background: rgb(71, 71, 71); transform: .5s;
+}
+/* Button tab section, uses JS from web, not fully understood vid: (coding nepal Responsive Nav menu */
+.checkbtn {
+    font-size: 50px; margin-right: 20px; line-height: 160px; cursor: pointer;
+    display: none; float: right;
+}
+#check {
+    display: none;
+}
+@media (max-width: 778px) {
+    .checkbtn{
+        display: block;
+    }
+     nav ul {
+        position: fixed; width: 100%; height: 100vh;
+        background-color: rgb(255, 255, 255); 
+        top: 160px; left: -100%;
+        text-align: center;
+        transition: all .5s;    
+    }
+    nav ul li {
+        display: block;
+    }
+    #check:checked ~ ul {
+        left:0;
+    }
+}
+/* This method here needs more to work
+.Main:before,
+.Main:after { content:""; display: table;}
+
+.Main:after { clear: both; }
+.Main {clear: both; }
+
+.Sidebar {
+    float: left;
+    margin: 0px 2%; margin-right: 0px;
+    width: 16%;
+}
+.Content {
+    float: right;
+    margin: 0px 2%; margin-left: 0px;
+    width: 80%;
+}
+ h2 {
+    text-align: center
+}
+*/
+
+/* grid method for responsive page(phone grid too) */
+.Main {
+    display:grid; height: 100vh;
+    grid-template-columns: 1fr 4fr; grid-template-areas: "Sidebar Content"; grid-gap: 0.2rem;
+}
+.Sidebar {
+    grid-area: Sidebar;
+    margin: 0px 5%; margin-right: 0px;
+}
+.Content {
+    grid-area: Content;
+    margin: 0px 2%; margin-left: 0px;
+}
+@media (max-width: 778px) {
+    .Main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 4fr ;
+        grid-template-areas: "Sidebar" "Content" ;
+    }
+    .Content {
+        margin: 0px 2%; ;
+}
+    .Sidebar h3{
+        text-align: left;
+    }
+    }
+
+
+/* Stylings */
+
+h3, h2 {
+    text-align: center;
+}
+
+article p sup {
+    margin-left: 2%;
+    
+}
