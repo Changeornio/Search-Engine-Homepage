@@ -170,3 +170,8 @@ article {
 .TitleColour {
     background-color: black;color: white;
 }
+@media (max-width: 438px) {
+    h1 {
+        font-size: 40px;
+}
+}
