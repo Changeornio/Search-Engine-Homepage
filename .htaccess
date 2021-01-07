@@ -12,8 +12,6 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 
 # Here we actually show the page that has the .html extension
 
-RewriteRule ^Home.html index.html [NC]
-
 RewriteRule ^(.*)$ $1.html [NC]
 
-
+RewriteRule ^Home index [NC]
